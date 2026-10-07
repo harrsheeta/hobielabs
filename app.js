@@ -15,19 +15,7 @@ buildTrack('#track-left',workClips.slice(0,5));
 buildTrack('#track-right',workClips.slice(5));
 let paused=window.matchMedia('(prefers-reduced-motion: reduce)').matches;function setPaused(value){paused=value;$('.snippet-rows').classList.toggle('paused',value);$('#motion-toggle').setAttribute('aria-pressed',String(value));$('#motion-label').textContent=value?'RESUME MOTION':'PAUSE MOTION';$('#motion-icon').textContent=value?'▷':'Ⅱ';document.dispatchEvent(new Event('workmotionchange'))}setPaused(paused);$('#motion-toggle').onclick=()=>{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){$('#motion-label').textContent='REDUCED MOTION ON';return}setPaused(!paused)};
 $('.close').onclick=()=>$('#preview-dialog').close();$('#dialog-done').onclick=()=>$('#preview-dialog').close();$('#preview-dialog').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.currentTarget.close()});
-$('#contact-form').addEventListener('submit', e => {
-  const form = e.currentTarget;
-  ['name', 'email', 'idea'].forEach(id => { $('#' + id).value = $('#' + id).value.trim(); });
-  if (!form.reportValidity()) { e.preventDefault(); return; }
-  if (location.protocol === 'file:') {
-    e.preventDefault();
-    $('#form-status').textContent = 'Email submission is available when this site is served online. Your brief has not been sent. You can email collab@hobielabs.com directly.';
-    return;
-  }
-  // Standard HTTPS submission lets the provider handle CAPTCHA and confirmation.
-  // Never report delivery before the provider has accepted the enquiry.
-  $('#form-status').textContent = 'Opening secure submission…';
-});
+// Contact submissions are handled separately in contact-form.js.
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)$$('nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id))}),{rootMargin:'-15% 0px -55% 0px'});$$('main>section').forEach(s=>observer.observe(s));
 
 const heroVideo = $('#hero-video');

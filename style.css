@@ -262,3 +262,6 @@ main>.production-questions{display:grid;grid-template-columns:1fr 1.3fr;gap:8%;b
 .production-faqs summary{font:600 16px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:0;padding:22px 0;gap:18px}.production-faqs summary::after{content:'+';margin-left:auto;font-size:24px;color:var(--accent)}.production-faqs details[open]>summary::after{content:'−'}
 .production-faqs p{font-size:14px;line-height:1.8;color:var(--muted);padding:0 0 24px}.production-faqs p a{color:var(--fg);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){main>.production-intro,main>.production-questions{grid-template-columns:minmax(0,1fr);gap:28px;padding:48px 6%}.production-intro p{font-size:14px}.production-faqs summary{font-size:15px}}
+#contact-form button:disabled{opacity:.65;cursor:wait;transform:none}
+#form-email-fallback{margin-top:12px;color:var(--accent);font-size:12px;text-decoration:underline;text-underline-offset:3px}
+#form-email-fallback[hidden]{display:none}

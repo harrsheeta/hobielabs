@@ -16,6 +16,7 @@ Then open http://localhost:8000/ in your browser.
 
 - `index.html` — homepage, services, portfolio, FAQs and enquiry form
 - `style.css` and `app.js` — shared styling and homepage interactions
+- `contact-form.js` — enquiry submission, validation and delivery status
 - `full-time-unpaid-interns.html` — Team page
 - `interns.css` and `interns.js` — Team styling and animations
 - `assets/` — local video, image and audio files
@@ -34,7 +35,7 @@ For GitHub Pages, choose **Settings → Pages → Deploy from a branch**, then s
 
 Canonical URLs, social previews and the sitemap currently use **https://hobielabs.com/**. Configure your chosen host and domain before launch. If using another public URL, update the canonical tags, social URLs, JSON-LD URLs, robots.txt and sitemap.xml to match it.
 
-The contact form posts to FormSubmit for **collab@hobielabs.com**. Complete FormSubmit’s email activation and verify a real submission after publishing. The site contains no email credentials or private backend.
+The contact form posts to FormSubmit for **collab@hobielabs.com**. Complete FormSubmit’s email activation and verify a real submission after publishing. Hosted visitors submit without leaving the page; local previews use FormSubmit’s standard verification flow. Failed submissions retain the entered details, and the form prevents duplicate sends while a request is pending. The site contains no email credentials or private backend.
 
 Instagram profile numbers are fixed screenshot values with count-up animation; they are not live account data. Profile cards link to the real Instagram profiles.
 
