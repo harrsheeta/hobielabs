@@ -253,15 +253,6 @@ header nav{gap:clamp(16px,3vw,48px)}header nav a{white-space:nowrap}
 .cat-dance-toggle{padding:8px 12px;min-height:44px;border:0;border-radius:0;background:transparent;color:var(--accent);font-size:13px;font-weight:600}
 .cat-dance-toggle:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
 
-/* Searchable service context, styled to match the existing black and yellow design. */
-main>.production-intro{padding:64px 7%;display:grid;grid-template-columns:1.1fr 1fr;gap:8%;align-items:center;border-bottom:1px solid var(--line)}
-.production-intro h1{font:400 clamp(38px,4.8vw,72px)/1.03 Impact,'Arial Narrow',sans-serif;letter-spacing:-.02em}.production-intro h1 span{color:var(--accent)}
-.production-intro p{font-size:15px;line-height:1.8;color:var(--muted);max-width:540px}.production-text-link{display:inline-block;margin-top:20px;padding:8px 0;color:var(--accent);font-size:13px;font-weight:600}
-main>.production-questions{display:grid;grid-template-columns:1fr 1.3fr;gap:8%;border-top:1px solid var(--line)}
-#production-questions h2{font:400 clamp(42px,5vw,72px)/1.02 Impact,'Arial Narrow',sans-serif}.production-faqs{min-width:0}
-.production-faqs summary{font:600 16px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:0;padding:22px 0;gap:18px}.production-faqs summary::after{content:'+';margin-left:auto;font-size:24px;color:var(--accent)}.production-faqs details[open]>summary::after{content:'−'}
-.production-faqs p{font-size:14px;line-height:1.8;color:var(--muted);padding:0 0 24px}.production-faqs p a{color:var(--fg);text-decoration:underline;text-underline-offset:3px}
-@media(max-width:760px){main>.production-intro,main>.production-questions{grid-template-columns:minmax(0,1fr);gap:28px;padding:48px 6%}.production-intro p{font-size:14px}.production-faqs summary{font-size:15px}}
 #contact-form button:disabled{opacity:.65;cursor:wait;transform:none}
 #form-email-fallback{margin-top:12px;color:var(--accent);font-size:12px;text-decoration:underline;text-underline-offset:3px}
 #form-email-fallback[hidden]{display:none}
