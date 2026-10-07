@@ -1,0 +1,57 @@
+
+.interns-main{max-width:1360px;margin:auto;padding:165px clamp(20px,6vw,80px) 72px}
+.interns-intro{padding-bottom:40px}.interns-intro h1{font:400 clamp(60px,9.5vw,138px)/1.02 Impact,'Arial Narrow',sans-serif;margin:0 0 20px;letter-spacing:-.02em}.interns-intro h1 span{color:var(--accent)}.interns-intro p{font-size:18px;color:var(--muted)}
+.team-profiles{position:relative;margin:12px 0 72px;padding:16px 12px 32px}
+.founders-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:38px;max-width:1020px;margin:auto}
+.founder-section{min-width:0;width:74%;max-width:650px;border:1px solid #c5c7b070;border-radius:16px;background:transparent;box-shadow:0 22px 48px -20px #000b,0 0 28px -9px #ffe60027,0 2px 10px #aaa1;transform-origin:center;transition:border-color .3s,box-shadow .3s}
+.founder-section:first-child{justify-self:start;rotate:-1.5deg}.founder-section:last-child{justify-self:end;rotate:1.5deg}
+.profile-image-frame{display:block;position:relative;width:100%;container-type:inline-size;overflow:hidden;border-radius:15px;mix-blend-mode:lighten}
+.profile-image-frame img{display:block;width:100%;height:auto}.profile-image-frame:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.founder-section:hover{border-color:#ffe600b3;box-shadow:0 24px 48px -20px #000b,0 0 32px -8px #ffe60040}
+/* The counter temporarily covers only the statistic digits. At completion the original image is shown untouched. */
+.profile-counter{display:none;position:absolute;background:#0f1115;color:#f5f5f5;text-align:left;white-space:nowrap;font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:-.1px;font-variant-numeric:tabular-nums}
+.profile-sehaj .profile-counter{left:45.37815%;top:72.8%;width:7.98%;height:16%;font-size:2.941176cqw;line-height:4.20168cqw}
+.profile-hash .profile-counter{left:41.64948%;top:72.58065%;width:8.04%;height:16.129%;font-size:2.886598cqw;line-height:4.12371cqw}
+.founder-section.counter-ready .profile-counter{display:block}.founder-section.count-finished .profile-counter{display:none}
+
+.founder-section.scroll-ready{opacity:0;transform:translateY(30px) scale(.98);transition:opacity .8s ease,transform 1s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;transition-delay:var(--card-delay,0ms)}.founder-section.is-visible{opacity:1;transform:none}
+.recognized-section{padding:clamp(20px,4vw,48px);border:1px solid #3d3d3d;border-radius:26px;background:linear-gradient(145deg,#181818aa,#0d0d0daa);box-shadow:0 28px 60px -35px #000b}
+#recognized-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;font:400 clamp(38px,5vw,66px)/1 Impact,'Arial Narrow',sans-serif;letter-spacing:-.02em;margin:0 0 40px}#recognized-heading>span{font-family:Arial,sans-serif;font-size:.7em;color:var(--accent)}
+.recognized-grid{display:grid;position:static;height:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:center;overflow:visible}
+.comment-slot{position:relative;min-width:0;width:auto}.comment-slot:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 12px);justify-self:center}
+.comment-frame{position:relative;aspect-ratio:var(--crop-ratio);overflow:hidden;margin:0;border:1px solid #55565c;border-radius:12px;background:#1a1c20;box-shadow:0 12px 26px -14px #000b;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s}
+.comment-frame img{display:block;position:absolute;width:var(--image-width);max-width:none;height:auto;left:var(--image-left);top:var(--image-top)}.comment-cleanup{position:absolute;background:#1a1c20;pointer-events:none}
+
+.comment-slot.comment-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);transition-delay:var(--reveal-delay,0ms)}.comment-slot.has-entered{opacity:1;transform:none}.comment-slot.has-entered .comment-frame{animation:none}
+
+.team-footer{max-width:1360px;margin:auto;padding:10px 6% 32px}.team-footer .footer-logo{display:block;border:0;margin:0;padding:0}.team-footer-links{display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:1px}.team-footer-links a{min-height:44px;display:flex;align-items:center}
+@media(max-width:760px){.interns-main{padding-top:125px;padding-bottom:48px}.interns-intro h1{font-size:clamp(46px,11vw,80px)}.interns-intro p{font-size:15px}.team-profiles{padding:12px 4px 20px;margin-bottom:40px}.founder-section{width:91%}.founders-grid{gap:28px}.recognized-section{border-radius:20px}.recognized-grid{gap:18px;grid-template-columns:minmax(0,1fr)}.comment-slot:last-child:nth-child(odd){grid-column:auto;width:100%}#recognized-heading{margin-bottom:28px}.comment-slot.comment-reveal{transition-delay:0ms}.team-footer-links{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.founder-section.scroll-ready,.comment-slot.comment-reveal{opacity:1;transform:none;transition:none}.comment-slot.has-entered .comment-frame{animation:none}.comment-frame,.founder-section{transition:none}.comment-frame:hover{transform:none}.founder-section.counter-ready .profile-counter{display:none}}
+/* Number masks follow each screenshot’s original pixel coordinates. */
+.profile-sehaj .profile-counter[data-stat="posts"]{left:28.78151%;width:5.25210%}
+.profile-sehaj .profile-counter[data-stat="following"]{left:69.53782%;width:5.46218%}
+.profile-hash .profile-counter[data-stat="posts"]{left:28.24742%;width:2.26804%}
+.profile-hash .profile-counter[data-stat="following"]{left:64.74227%;width:5.15464%}
+
+/* Remove the profile screenshots' flat dark backing without changing the original photos. */
+.profile-filter-defs{position:absolute;pointer-events:none;overflow:hidden}
+main>.team-profiles{background:transparent;isolation:auto}
+main>.team-profiles::before{display:none}
+.profile-image-frame{mix-blend-mode:normal;background:transparent}
+.profile-keyed-image{filter:url(#profile-remove-bg)}
+.profile-image-frame .profile-photo-preserve{position:absolute;inset:0;pointer-events:none}
+.profile-sehaj .profile-photo-preserve{clip-path:ellipse(9.25% 35.2% at 14.92% 52.8%)}
+.profile-hash .profile-photo-preserve{clip-path:ellipse(8.05% 31.45% at 14.64% 52.42%)}
+
+/* A slow, steady spin for the Recognized by star. */
+#recognized-heading>span{display:inline-block;flex:0 0 auto;width:1em;height:1em;line-height:1;text-align:center;transform-origin:center;animation:recognized-star-spin 60s linear infinite}
+@keyframes recognized-star-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#recognized-heading>span{animation:none}}
+
+/* Cat companion in the empty upper-right pocket, above Hash's profile. */
+.founders-grid>.profile-sehaj{grid-column:1;grid-row:1}
+.founders-grid>.profile-hash{grid-column:1;grid-row:2}
+.team-cat{grid-column:1;grid-row:1;align-self:center;justify-self:end;width:min(18%,150px);margin-right:12px;pointer-events:none;border-radius:14px;overflow:hidden;box-shadow:0 14px 30px -12px #000a}
+.team-cat img{display:block;width:100%;height:auto}.team-cat .team-cat-still{display:none}
+@media(max-width:760px){.founders-grid>.profile-hash{grid-row:3}.team-cat{grid-row:2;width:100px;margin-right:12px}.founders-grid{row-gap:22px}}
+@media(prefers-reduced-motion:reduce){.team-cat .team-cat-animated{display:none}.team-cat .team-cat-still{display:block}}
