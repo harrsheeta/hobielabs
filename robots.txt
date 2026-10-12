@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hobielabs.com/sitemap.xml
+Sitemap: https://www.hobielabs.com/sitemap.xml
