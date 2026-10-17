@@ -33,13 +33,21 @@ For GitHub Pages, choose **Settings → Pages → Deploy from a branch**, then s
 
 ## Production setup
 
-Canonical URLs, social previews and the sitemap currently use **https://hobielabs.com/**. Configure your chosen host and domain before launch. If using another public URL, update the canonical tags, social URLs, JSON-LD URLs, robots.txt and sitemap.xml to match it.
+Canonical URLs, social previews and the sitemap currently use **https://www.hobielabs.com/**. Configure your chosen host and domain before launch. If using another public URL, update the canonical tags, social URLs, JSON-LD URLs, robots.txt and sitemap.xml to match it.
 
 The contact form posts to FormSubmit for **collab@hobielabs.com**. Complete FormSubmit’s email activation and verify a real submission after publishing. Hosted visitors submit without leaving the page; local previews use FormSubmit’s standard verification flow. Failed submissions retain the entered details, and the form prevents duplicate sends while a request is pending. The site contains no email credentials or private backend.
 
 Instagram profile numbers are fixed screenshot values with count-up animation; they are not live account data. Profile cards link to the real Instagram profiles.
 
 The site loads its media from relative paths in `assets/`. Keep that folder alongside `index.html`. Fonts and contact-form submission need an internet connection.
+
+## Technical SEO
+
+Both pages include canonical URLs, social preview metadata and linked JSON-LD entities. The homepage describes the organization, its service and website; the Team page connects its existing AboutPage and people to the same website. Keep page titles and descriptions synchronized only when copy changes are approved.
+
+`vercel.json` permanently redirects `/index.html` to `/` on Vercel to consolidate the duplicate homepage URL. Other hosts need an equivalent redirect configured separately. `robots.txt` and `sitemap.xml` list the www production domain; keep domain redirects, canonicals and the sitemap aligned. The non-www domain requires working DNS and a host-level redirect to www.
+
+After deployment, verify both sitemap URLs return 200, `/index.html` redirects to `/`, and inspect the pages in Google Search Console. Search Console verification and sitemap submission are account-level steps, not performed by these files.
 
 ## Editing
 
